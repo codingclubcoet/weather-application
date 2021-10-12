@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+        mark { 
+            background-color: rgb(0, 7, 214);
+            color: rgb(255, 255, 255);
+        }
+        .result-div {
+            width: 293px;
+            padding: 10px;
+            border: 5px solid gray;
+            margin: 0;
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h3><mark>Weather application</mark></h3>
+        <br/>
+
+        <div class="result-div">
+            <img src="http://openweathermap.org/img/wn/{{ data['icon']}}.png"/><br/>
+            <mark>City</mark> <p>{{ data['city'] }}</p>
+            <mark>Longitude</mark> <p>{{ data['longitude'] }}</p>
+            <mark>Latitude</mark> <p>{{ data['latitude'] }}</p>
+            <mark>Humidity</mark> <p>{{ data['humidity'] }}%</p>
+            <mark>Temperature</mark> <p>{{ data['temperature'] }}°C</p>
+        </div>
+        </center>
+        <br/>
+        <hr/>
+
+    </body>
+</html>
