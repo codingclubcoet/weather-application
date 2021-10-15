@@ -13,7 +13,7 @@ def home():
     place = request.args.get('place')
     url = f"{BASE_URL}{place}&units=metric&appid={API_KEY}"
     resp = requests.get(url).json()
-
+    description = resp['weather'][0]['description']
     latitude = resp['coord']['lat']
     longitude = resp['coord']['lon']
     humidity = resp['main']['humidity']
@@ -23,6 +23,7 @@ def home():
 
     data = {
         'icon': icon,
+        'description': description,
         'city': city,
         'latitude': latitude,
         'longitude': longitude,
